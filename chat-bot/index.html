@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body background="images/image.jpg" style="background-repeat: no-repeat;">
+
+<center><h1 class="display-2"><font color="white">College Website</font></h1></center>
+
+
+<button class="open-button" onclick="openForm()"><img src="images/chat-icon.png" width="40px;" height="40px;"></button>
+
+<div class="chat-popup" id="myForm">
+                <br><center><h4 class="display-6">Cyberspace Virtual Assistant</h4></center>
+    <div class="container-fluid">
+    <div class="chatlog-container" id="chatLog">
+    		<div class="chat bot">
+    			<div class="user-photo"><img src="images/chip.png"></div>
+    			<p class="chat-msg" id="chat-bot">Hi, How may i help you?</p>
+    		</div>
+    		<!--<div class="chat self">
+    			<div class="user-photo"><img src="images/boy.png"></div>
+    			<p class="chat-msg" id="self"></p>
+    		</div>-->
+    	</div>
+    </div>
+   <div class="container-fluid">
+  	   <div class="row">
+           <div class="col-sm-8" style="margin-top: 5px; margin-bottom: 5px;">
+              <input type="text" class="form-control" id="msg" style="width: 220px;" onkeydown="if (event.keyCode == 13) {talk()}"> 
+       </div>
+       <div class="col-sm-1" style="margin-top: 5px; margin-bottom: 5px;"><button type="submit" class="btn" style="width: 30px; padding: 0px; background-color: white; padding-top: 3px;" onclick="talk();"><img src="images/send.png" width="30px;" height="30px;"></button>
+       </div>
+        <div class="col-sm-1" style="margin-top: 5px; margin-bottom: 5px;">
+           <button type="button" class="btn cancel" style="width: 20px; background-color: white; padding-top: 3.5px;" onclick="closeForm()"><img src="images/clear.png" width="25px;" height="25px;"></button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("msg").focus();
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
